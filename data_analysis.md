@@ -1,5 +1,5 @@
 ---
-Date: "2019-08-27"
+Date: "2019-09-18"
 Step: 'Data analysis'
 Description: Data inspection & manipulation exercise, using the diabetes data.
 ---
