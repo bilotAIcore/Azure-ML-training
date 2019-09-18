@@ -7,7 +7,7 @@ title: 'Data analysis'
 
 ## Import Data
 __Source__: Azure Blob
-__SAS__: https://louhiakoulutusstorage.blob.core.windows.net/koulutuscontainer/diabetes.csv?st=2019-09-13T10%3A18%3A35Z&se=2019-09-30T10%3A18%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=4IlUTy9o4PDiU4WunURQwtbY4kUsu7e%2B1upAlXGdO6Q%3D
+__SAS__: ask for this
 __File has header__: TRUE
 __Use cached results__: TRUE
 
