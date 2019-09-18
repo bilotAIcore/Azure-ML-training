@@ -4,6 +4,8 @@ Step: 'Model training'
 Description: Modeling & evaluation exercise, using the diabetes data.
 ---
 
+<img src="https://msdnshared.blob.core.windows.net/media/2016/08/azml.png" width="200" style="float:right"/>
+
 ## 1. Import Data
 Load saved Dataset for diabetes.
 
