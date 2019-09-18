@@ -122,7 +122,7 @@ same outcome as that used above. Feel free to use either version.</p>
 <p>Connect the <b>Execute R Script</b> operator to a 
 <b>Select Column in Dataset</b> operator. Using this operator,
 drop <code>Insulin</code> from the data. This could ofcourse also 
-be done using a script.</p>
+be done using a script. Save data as Dataset for later use.</p>
 
 ## 6. Split Data
 
