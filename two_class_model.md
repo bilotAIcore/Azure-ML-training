@@ -4,10 +4,15 @@ Step: 'Model training'
 Description: Modeling & evaluation exercise, using the diabetes data.
 ---
 
-<img src="https://msdnshared.blob.core.windows.net/media/2016/08/azml.png" width="200" style="float:right"/>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe28kRsvMfHCz-rQz5oZgtVJhks1S6_W5W0WRcudlJf3_WVS5J" width="150" style="float:right;"/>
+
+# Two-class classification
+<br>
 
 ## 1. Import Data
-Load saved Dataset for diabetes.
+
+Load saved Dataset for diabetes. <br />
+This can be found under the *Saved Datasets* section in the operator menu.
 
 ## 2. Split Data
 

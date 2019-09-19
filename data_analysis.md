@@ -4,14 +4,20 @@ Step: 'Data analysis'
 Description: Data inspection & manipulation exercise, using the diabetes data.
 ---
 
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe28kRsvMfHCz-rQz5oZgtVJhks1S6_W5W0WRcudlJf3_WVS5J" width="150" style="float:right;"/>
+
+# Data Analysis
+<br>
+
 ## 1. Import Data
-__Source__: Azure Blob
 
-__SAS__: ask for this
+- __Source__: Azure Blob
 
-__File has header__: TRUE
+- __SAS__: ask for this
 
-__Use cached results__: TRUE
+- __File has header__: TRUE
+
+- __Use cached results__: TRUE
 
 ## 2. Convert to CSV
 <p>After adding this operator, connecting it to the <b>Import Data</b> operator, and running the experiment, open the converted data in a new <b>R</b> Notebook.</p>
