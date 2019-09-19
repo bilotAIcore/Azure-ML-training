@@ -24,7 +24,7 @@ Description: Data manipulation & clustering exercise, using the Steel Plates dat
 to separate it from the rest of the features later on.</p>
 
 ## 3. Select Columns in Dataset
-<p>This operatoer is used next to drop features that have 
+<p>This operator is used next to drop features that have 
 been used to generaste the Label. Save as Dataset for later use.</p>
 
 ## 4. Summarize Data

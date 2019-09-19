@@ -1,7 +1,7 @@
 ---
 Date: "2019-09-18"
-Step: 'Data analysis'
-Description: Data manipulation & clustering exercise, using the Steel Plates data.
+Step: 'Model tuning'
+Description: Model train & optimisation exercise, using the Steel Plates data.
 ---
   
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe28kRsvMfHCz-rQz5oZgtVJhks1S6_W5W0WRcudlJf3_WVS5J" width="150" style="float:right;"/>
@@ -10,93 +10,37 @@ Description: Data manipulation & clustering exercise, using the Steel Plates dat
   
 ## 1. Import Data
 
-- __Source__: Azure Blob
+Load saved Dataset for steel plates. <br />
+This can be found under the *Saved Datasets* section in the operator menu.
 
-- __SAS__: ask for this
+## 2. Remove correlated features
+<p>Drop features that are highly redundant. This can be 
+done either manually, or programmatically.</p>
 
-- __File has header__: TRUE
+## 3. Split data
+<p>Make sure the random sampling of data is representative. 
+This can be achieved by doing stratified sampling, within 
+the classes of the Label.</p>
 
-- __Use cached results__: TRUE
+## 4. Model optimisation
+<p>This step requires two operators; a trainable model and
+<b>Tune Model Hyperparameters</b>. Remember that the the tuning 
+is to be done on the <i>training</i> data.</p>
 
-## 2. Edit Metadata
-<p>Change the role of the <code>Fault</code> column to "Label",
-to separate it from the rest of the features later on.</p>
+- <b>Model</b>: train mode needs to be set to <i>Parameter Range</i>
 
-## 3. Select Columns in Dataset
-<p>This operatoer is used next to drop features that have 
-been used to generaste the Label. Save as Dataset for later use.</p>
+- <b>Tuning</b>: here ione needs to configure the (1) sweeping mode, (2) number of runs, (3) the label, and (4) the metric for evaluating model performance.
 
-## 4. Summarize Data
-<p>Connect <b>Summarize Data</b> operator to the 
-<b>Select Columns in Dataset</b> operator to get 
-statistical summary of the data.</p>
+<p>As this is a multi-class classification problem, 
+the evaluation metrics that are easiest to interpret are 
+Accuracy and Average Log Loss.</p>
 
-## 4. Compute Linear Correlation
-<p>Connect <b>Compute Linear Correlation</b> operator to the 
-<b>Select Columns in Dataset</b> operator to get 
-Pearson correlation coefficients between features. It should 
-become clear that there are strong correlations in the data.</p>
+## 4. Model evaluation
+Finally, add these operators to get an idea how well the model(s) performs
 
-## 5. Normalize Data
-<p>To perform a clustering, the features need to be taken to 
-the same scale. Othervise features with greater variance will 
-dominate the analysis. For this purpose, connect a 
-<b>Normalize Data</b> operator to the <b>Select Columns in Dataset</b>
-operator. Use "MinMax" scaling (try also different alternatives).</p>
+- <b>Score model</b> operator
 
-## 6. Principal Component Analysis
-<p>For visualisation purposes, perform a <b>Principal Component Analysis</b> (reducing to 2 dimensions) on the normalized data.</p>
+- <b>Evaluate model</b> operator
 
-## 7. Execute R Script
-<p>Finally, connect an <b>Execute R Script</b> operator to the
-<b>Normalize Data</b> and <b>Principal Component Analysis</b>
-operators (in this order; this is assumed in the code). Next, 
-add the following to the script-field:</p>
-  
-```r
-# Map 1-based optional input ports to variables
-df <- maml.mapInputPort(1) # class: data.frame
-pca <- maml.mapInputPort(2) # class: data.frame
-
-cols = setdiff(names(df),'Fault')
-x = df[,cols]
-n = length(unique(df$Fault))
-result = kmeans(x = x, centers = n)
-
-df$clusters = result$cluster
-pca$clusters = factor(result$cluster)
-
-# Output to GR-device:
-library(ggplot2)
-ggplot(pca,aes(Col1,Col2,
-       col = clusters, 
-       shape = Fault)) + 
-    geom_point()
-
-# Select data.frame to be sent to the output Dataset port
-maml.mapOutputPort("df");
-```
-
-<p>This script combines the normalised data as well as the PCA
-axes (which could also be calculated in this script). As an output
-you get a visualisation of the clustering as well as a dataset that
-has the cluster assignments included.</p>
-
-## 8. Optimize Clustering
-<p>As an alternative to manual tuning of the cluster number, one
-can also automatically find an optimal clustering, based on some 
-criterion. This can be done either with a script, or by using 
-operators. The later method is used here.</p>
-
-<p>Add a <b>K-Means Clustering</b> operator and a 
-<b>Sweep Clustering</b> operator and connect these as required.
-In the <b>K-Means Clustering</b> operator, specify a 
-<i>Parameter range</i>, say 2, 3, 4, 5, 6, and 7. In the
-<b>Sweep Clustering</b> operator, set Sweep mode to "Entire grid". 
-After running the clustering sweep, inspect the Result dataset to see
-how the assignment was made. Does the evaluation Metric affect
-the clustering?</p>
-
-<p>The most convenient way to analyse the clustering result
-against the data is to use a Notebook.</p>
-
+<p>In the <b>Evaluate model</b> operator, one can compare the
+performance between two different models.</p>
