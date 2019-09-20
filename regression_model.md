@@ -80,3 +80,20 @@ Finally, add these operators to get an idea how well the model(s) performs
 - <b>Score model</b> operator
 
 - <b>Evaluate model</b> operator
+
+<p>The <b>Evaluate model</b> operator gives performance metrics 
+for the model, against the testing data that should be connected 
+to the <b>Score model</b> operator. </p>
+
+Try different models and compare their performance.
+
+## 7. Create Web Service
+<p>When the experiment has been completed (run), it is possible to 
+publish the model as a predictive web service. Doing this is
+fairly simple in ML Studio:</p> 
+
+- First, click the "SET UP WEB SERVICE" button. This will open a new tab: Predictive experiment.
+
+- Next, run the <i>Predictive experiment</i>. This will serialise the model and store it under "Trained models" menu.
+
+- Then, click the "DEPLOY WEB SERVICE" button and you're done! The deployed web service will appear under the "Web services" menu.

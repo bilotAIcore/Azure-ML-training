@@ -12,6 +12,7 @@ More material can be found <a href="https://github.com/Azure-Readiness/hol-azure
 
 <br>
 <hr>
+
 ## What is Azure ML Studio?
 <p>
 Azure Machine Learning Studio gives you an interactive, visual workspace to easily build, test, and iterate on a predictive analysis model. You drag-and-drop datasets and analysis modules onto an interactive canvas, connecting them together to form an experiment, which you run in Machine Learning Studio. To iterate on your model design, you edit the experiment, save a copy if desired, and run it again. When you're ready, you can convert your training experiment to a predictive experiment, and then publish it as a web service so that your model can be accessed by others.
@@ -21,6 +22,7 @@ Azure Machine Learning Studio gives you an interactive, visual workspace to easi
 
 <br>
 <hr>
+
 ## What is Azure ML Service?
 <p>This is a framework to streamline the building, training, and deployment of machine learning models. Featuring:</p>
 
