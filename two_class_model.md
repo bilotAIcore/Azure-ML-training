@@ -56,3 +56,7 @@ operator.</p>
 <p>Connect the result to a new <b>Score Model</b> operator, along 
 with the trained model and finally connect the output to the
 <b>Evaluate Model</b> operator. See how the two results differ.</p>
+
+<p>As this is a classification problem, the ROC-curve provides a good
+method for model comparison (below image from www.wikipedia.org):</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Roccurves.png/440px-Roccurves.png" width="300"/>

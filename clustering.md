@@ -25,18 +25,12 @@ to separate it from the rest of the features later on.</p>
 
 ## 3. Select Columns in Dataset
 <p>This operator is used next to drop features that have 
-been used to generaste the Label. Save as Dataset for later use.</p>
+been used to generate the Label. Save as Dataset for later use.</p>
 
 ## 4. Summarize Data
 <p>Connect <b>Summarize Data</b> operator to the 
 <b>Select Columns in Dataset</b> operator to get 
 statistical summary of the data.</p>
-
-## 4. Compute Linear Correlation
-<p>Connect <b>Compute Linear Correlation</b> operator to the 
-<b>Select Columns in Dataset</b> operator to get 
-Pearson correlation coefficients between features. It should 
-become clear that there are strong correlations in the data.</p>
 
 ## 5. Normalize Data
 <p>To perform a clustering, the features need to be taken to 

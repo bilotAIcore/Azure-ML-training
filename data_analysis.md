@@ -25,6 +25,10 @@ Description: Data inspection & manipulation exercise, using the diabetes data.
 <p>This opens a new Azure (Jupyter) Notebook, using R-language.
 
 ## 3. R Notebook
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1200px-Jupyter_logo.svg.png" 
+width="150"
+style="float:right;"/>
+
 After running the first two cells, in the next empty cell, 
 type:
 
@@ -128,7 +132,9 @@ same outcome as that used above. Feel free to use either version.</p>
 <p>Connect the <b>Execute R Script</b> operator to a 
 <b>Select Column in Dataset</b> operator. Using this operator,
 drop <code>Insulin</code> from the data. This could ofcourse also 
-be done using a script. Save data as Dataset for later use.</p>
+be done using a script. </p>
+
+Save data as Dataset for later use.
 
 ## 6. Split Data
 

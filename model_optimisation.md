@@ -13,16 +13,26 @@ Description: Model train & optimisation exercise, using the Steel Plates data.
 Load saved Dataset for steel plates. <br />
 This can be found under the *Saved Datasets* section in the operator menu.
 
-## 2. Remove correlated features
-<p>Drop features that are highly redundant. This can be 
-done either manually, or programmatically.</p>
+## 2. Compute Linear Correlation
+<p>Connect <b>Compute Linear Correlation</b> operator to the 
+<b>Import data</b> operator to get Pearson correlation coefficients between features. It should become clear that there are strong correlations in the data.</p>
 
-## 3. Split data
+## 3. Remove correlated features
+<p>Drop features that are highly redundant. This can be 
+done in three different ways:</p>
+
+-  manually
+
+- using an operator
+
+- programmatically with R/Python
+
+## 4. Split data
 <p>Make sure the random sampling of data is representative. 
 This can be achieved by doing stratified sampling, within 
 the classes of the Label.</p>
 
-## 4. Model optimisation
+## 5. Model optimisation
 <p>This step requires two operators; a trainable model and
 <b>Tune Model Hyperparameters</b>. Remember that the the tuning 
 is to be done on the <i>training</i> data.</p>
@@ -35,7 +45,7 @@ is to be done on the <i>training</i> data.</p>
 the evaluation metrics that are easiest to interpret are 
 Accuracy and Average Log Loss.</p>
 
-## 4. Model evaluation
+## 6. Model evaluation
 Finally, add these operators to get an idea how well the model(s) performs
 
 - <b>Score model</b> operator
