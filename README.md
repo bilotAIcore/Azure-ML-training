@@ -6,8 +6,6 @@
 with Azure Machine Learning, usign the 
 <a href="https://docs.microsoft.com/en-us/azure/machine-learning/studio/what-is-ml-studio">ML Studio</a>.
 
-<p>The training features .</p>
-
 More material can be found <a href="https://github.com/Azure-Readiness/hol-azure-machine-learning">here</a>
 
 <br>
