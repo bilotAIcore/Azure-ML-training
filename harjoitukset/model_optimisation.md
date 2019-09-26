@@ -27,6 +27,37 @@ done in three different ways:</p>
 
 - programmatically with R/Python
 
+Here's one example how to achieve this with Python code:
+
+```python
+# The script MUST contain a function named azureml_main
+# which is the entry point for this module.
+
+# imports up here can be used to 
+import pandas as pd
+import numpy as np
+
+# The entry point function can contain up to two input arguments:
+#   Param<dataframe1>: a pandas.DataFrame
+#   Param<dataframe2>: a pandas.DataFrame
+def azureml_main(dataframe1 = None, dataframe2 = None):
+
+    # Create correlation matrix
+    corr_matrix = dataframe1.corr().abs()
+
+    # Select upper triangle of correlation matrix
+    upper = corr_matrix.where(np.triu(np.ones(corr_matrix.shape), k=1).astype(np.bool))
+
+    # Find index of feature columns with correlation greater than 0.95
+    to_drop = [column for column in upper.columns if any(upper[column] > 0.95)]
+    
+    # Drop features 
+    dataframe1.drop(to_drop, axis=1, inplace = True)
+    
+    # Return value must be of a sequence of pandas.DataFrame
+    return dataframe1,
+```
+
 ## 4. Split data
 <p>Make sure the random sampling of data is representative. 
 This can be achieved by doing stratified sampling, within 
