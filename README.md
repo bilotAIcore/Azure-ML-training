@@ -23,6 +23,9 @@ Azure Machine Learning Studio gives you an interactive, visual workspace to easi
 <hr>
 
 ## What is Azure ML Service?
+
+<p>Azure Machine Learning can be used for any kind of machine learning, from classical ml to deep learning, supervised, and unsupervised learning. Whether you prefer to write Python or R code or zero-code/low-code options such as the designer, you can build, train, and track highly accurate machine learning and deep-learning models in an Azure Machine Learning Workspace.</p>
+
 <p>This is a framework to streamline the building, training, and deployment of machine learning models. Featuring:</p>
 
 - Simplified machine learning with powerful, no-code, automated machine learning capabilities and open-source support
