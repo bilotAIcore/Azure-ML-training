@@ -1,4 +1,5 @@
-<img src="https://www.bilot.fi/wp-content/uploads/2018/06/bilot-logo.png" />
+
+<img src="https://portal.xpulz.com/img/teams/dat-issu-31315408367585077-6204efc24e1db66bbe84162b47cc986e31606.png"/>
 
 # Azure ML Training
 
@@ -31,5 +32,7 @@ Azure Machine Learning Studio gives you an interactive, visual workspace to easi
 - Web portal, visual interface & CLI
 
 - Enterprise-ready Azure security
+
+<p>More information and help can be found at <a href="https://docs.microsoft.com/en-us/azure/machine-learning/">Azure ML documentation</a></p>
 
 <img src="https://azurecomcdn.azureedge.net/cvt-fcb719f5b1b3c105c5625cc5679738abb3fb050750867e58624d7f90de7bfce3/images/page/services/machine-learning-service/mls-slide1-step1.jpg"/>
