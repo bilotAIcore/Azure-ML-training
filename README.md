@@ -35,4 +35,4 @@ Azure Machine Learning Studio gives you an interactive, visual workspace to easi
 
 <p>More information and help can be found at <a href="https://docs.microsoft.com/en-us/azure/machine-learning/">Azure ML documentation</a></p>
 
-<img src="https://azurecomcdn.azureedge.net/cvt-fcb719f5b1b3c105c5625cc5679738abb3fb050750867e58624d7f90de7bfce3/images/page/services/machine-learning-service/mls-slide1-step1.jpg"/>
+<img src="https://camo.githubusercontent.com/765fac5f46ba5a6036a63e7436ca5f7a250299ff/68747470733a2f2f646f63732e6d6963726f736f66742e636f6d2f656e2d75732f617a7572652f6d616368696e652d6c6561726e696e672f736572766963652f6d656469612f6f766572766965772d776861742d69732d617a7572652d6d6c2f616d6c2e706e67"/>
