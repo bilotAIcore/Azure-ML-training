@@ -1,4 +1,4 @@
-# 1) Lue AML työtila konfigurointi:
+# 1) Lue AML työtila-konfigurointi:
 with open('../ws_conf.json', 'r') as myfile:
     data = myfile.read()# parse file
     conf = json.loads(data)
